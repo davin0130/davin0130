@@ -1,4 +1,4 @@
-👋 Hi, I’m @davin0130
+👋 Hi, I’m davin
 
 <!---
 davin0130/davin0130 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
