@@ -5,7 +5,7 @@ davin0130/davin0130 is a ✨ special ✨ repository because its `README.md` (thi
 You can click the Preview link to take a look at your changes.
 --->
 
-<h3>Position: SW Project Manager</h3>
+<h3>Position: SW Product Manager</h3>
 <hr></hr>
 
 <h4>Skills</h4>
