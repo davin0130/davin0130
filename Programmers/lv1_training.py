@@ -362,4 +362,132 @@
 # print(new_string)
 
 
-# 
+
+# # 이중 배열 매핑하기
+# array = [1, 5, 2, 6, 3, 7, 4]
+# commands = [[2, 5, 3], [4, 4, 1], [1, 7, 3]]
+# answer = []
+
+# print(sorted(array[1:5])[2])
+# print(sorted(array[3:4])[0])
+# print(sorted(array[0:7])[2])
+# for i in range(len(commands)):
+#     answer.append(sorted(array[commands[i][0]-1:commands[i][1]])[commands[i][2]-1])
+# print(answer)
+
+# # 간단한 방법
+# print([sorted(array[commands[i][0]-1:commands[i][1]])[commands[i][2]-1] for i in range(len(commands))])
+
+# # 더 간단한 방법
+# print(list(map(lambda x:sorted(array[x[0]-1:x[1]])[x[2]-1], commands)))
+
+
+# # 문자열 순서대로 정렬 >>> fail
+# strs = ["sun", "bed", "car"]
+# n = 1
+# answer = []
+# index_list = sorted([i[n] for i in strs])
+# print(index_list)
+# if index_list != set(index_list):
+#     strs.sort()
+# for j in range(len(strs)):
+#     for k in range(len(index_list)):
+#         print(strs[k][n], index_list[j])
+#         if strs[k][n] == index_list[j]:
+#             answer.append(strs[k])
+#             index_list.pop(j)
+        
+# print(index_list, answer)
+
+
+
+# # 비밀지도 / "#"=1, " "=0 
+# n = 5
+# arr1 = [9, 20, 28, 18, 11]
+# arr2 = [30, 1, 21, 17, 28]
+# answer1 = []
+# answer2 = []
+# result = []
+
+# for i in range(len(arr1)):
+#     arr1[i] = format(arr1[i], 'b').zfill(n)
+# for i in range(len(arr2)):
+#     arr2[i] = format(arr2[i], 'b').zfill(n)
+
+# for i in arr1:
+#     count = ""
+#     for j in i:
+#         if j == "0":
+#             j = " "
+#         else:
+#             j = "#"
+#         count += j
+#     answer1.append(count)
+# for i in arr2:
+#     count = ""
+#     for j in i:
+#         if j == "0":
+#             j = " "
+#         else:
+#             j = "#"
+#         count += j
+#     answer2.append(count)
+
+# for i in range(len(answer1)):
+#     count = ''
+#     for j in range(len(answer1)):
+#         if answer1[i][j] == answer2[i][j]:
+#             count += answer1[i][j]
+#         else:
+#             count += "#"
+#     result.append(count)
+
+# print(result)
+
+
+# # 정해진 예산에서 최대 부서 지원하기
+# d = [1,3,2,5,4]
+# budget = 9
+# count = 0
+
+# for i in range(len(d)):
+#     if sum(sorted(d)[0:i+1]) <= budget:
+#         print(sorted(d)[0:i+1], sum(sorted(d)[0:i+1]))
+#         count += 1
+# print(count)
+    
+
+# # 
+# sizes = [[60, 50], [30, 70], [60, 30], [80, 40]]
+# answer = 0
+
+# w = list(zip(*sizes))[0]
+# h = list(zip(*sizes))[1]
+
+# max_size = max(max(w),max(h))
+# max_match = h[w.index(max_size)]
+
+
+# # 숫자 문자열과 영단어  >>>> fail
+# alp_dict = {"zero":0,"one":1,"two":2,"three":3,"four":4,"five":5,"six":6,"seven":7,"eight":8,"nine":9}
+# num_dict = {v:k for k,v in alp_dict.items()}
+# b_answer =[]
+
+# s = "23four5six7"
+# answer = ''
+# for i in range(len(s)):
+#     string = ''
+#     if s[i].isdigit() == True:
+#         b_answer.append(s[i])
+#     else:
+#         for i in range(9):
+#             if num_dict.get(i) in s:
+#                 b_answer.append(str(alp_dict.get(num_dict.get(i))))
+
+# print(b_answer)
+# # for i in range(9):
+# #     if num_dict.get(i) in s:
+# #         answer += str(alp_dict.get(num_dict.get(i)))
+# # print(answer)
+# # if num_dict in s:
+# #     print(num_dict)
