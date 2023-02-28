@@ -363,24 +363,6 @@
 
 
 
-# # 이중 배열 매핑하기
-# array = [1, 5, 2, 6, 3, 7, 4]
-# commands = [[2, 5, 3], [4, 4, 1], [1, 7, 3]]
-# answer = []
-
-# print(sorted(array[1:5])[2])
-# print(sorted(array[3:4])[0])
-# print(sorted(array[0:7])[2])
-# for i in range(len(commands)):
-#     answer.append(sorted(array[commands[i][0]-1:commands[i][1]])[commands[i][2]-1])
-# print(answer)
-
-# # 간단한 방법
-# print([sorted(array[commands[i][0]-1:commands[i][1]])[commands[i][2]-1] for i in range(len(commands))])
-
-# # 더 간단한 방법
-# print(list(map(lambda x:sorted(array[x[0]-1:x[1]])[x[2]-1], commands)))
-
 
 # # 문자열 순서대로 정렬 >>> fail
 # strs = ["sun", "bed", "car"]
@@ -401,50 +383,6 @@
 
 
 
-# # 비밀지도 / "#"=1, " "=0 
-# n = 5
-# arr1 = [9, 20, 28, 18, 11]
-# arr2 = [30, 1, 21, 17, 28]
-# answer1 = []
-# answer2 = []
-# result = []
-
-# for i in range(len(arr1)):
-#     arr1[i] = format(arr1[i], 'b').zfill(n)
-# for i in range(len(arr2)):
-#     arr2[i] = format(arr2[i], 'b').zfill(n)
-
-# for i in arr1:
-#     count = ""
-#     for j in i:
-#         if j == "0":
-#             j = " "
-#         else:
-#             j = "#"
-#         count += j
-#     answer1.append(count)
-# for i in arr2:
-#     count = ""
-#     for j in i:
-#         if j == "0":
-#             j = " "
-#         else:
-#             j = "#"
-#         count += j
-#     answer2.append(count)
-
-# for i in range(len(answer1)):
-#     count = ''
-#     for j in range(len(answer1)):
-#         if answer1[i][j] == answer2[i][j]:
-#             count += answer1[i][j]
-#         else:
-#             count += "#"
-#     result.append(count)
-
-# print(result)
-
-
 # # 정해진 예산에서 최대 부서 지원하기
 # d = [1,3,2,5,4]
 # budget = 9
@@ -457,7 +395,7 @@
 # print(count)
     
 
-# # 
+# # >>> fail
 # sizes = [[60, 50], [30, 70], [60, 30], [80, 40]]
 # answer = 0
 
