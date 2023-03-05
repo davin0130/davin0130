@@ -95,28 +95,28 @@
 
 
 
-# 콜라 문제 
-# 정답은 아무에게도 말하지 마세요.
-# 콜라 빈 병 2개를 가져다주면 콜라 1병을 주는 마트가 있다. 빈 병 20개를 가져다주면 몇 병을 받을 수 있는가?
-# 단, 보유 중인 빈 병이 2개 미만이면, 콜라를 받을 수 없다.
-empt_coke = 10
-change_coke = 2
-my_coke = 50
-new_coke = 0
-answer = 0
+# # 콜라 문제 
+# # 정답은 아무에게도 말하지 마세요.
+# # 콜라 빈 병 2개를 가져다주면 콜라 1병을 주는 마트가 있다. 빈 병 20개를 가져다주면 몇 병을 받을 수 있는가?
+# # 단, 보유 중인 빈 병이 2개 미만이면, 콜라를 받을 수 없다.
+# empt_coke = 10
+# change_coke = 2
+# my_coke = 50
+# new_coke = 0
+# answer = 0
 
 
-while my_coke//empt_coke != 0:
-    new_coke += my_coke//empt_coke * change_coke
-    my_coke -= my_coke//empt_coke * empt_coke
-    answer += new_coke
+# while my_coke//empt_coke != 0:
+#     new_coke += my_coke//empt_coke * change_coke
+#     my_coke -= my_coke//empt_coke * empt_coke
+#     answer += new_coke
 
-    my_coke += new_coke
-    new_coke = 0
-    answer += new_coke
-    print("my_coke = ", my_coke)
-    print("new_coke = ", new_coke)
-    print("answer = ", answer)
+#     my_coke += new_coke
+#     new_coke = 0
+#     answer += new_coke
+#     print("my_coke = ", my_coke)
+#     print("new_coke = ", new_coke)
+#     print("answer = ", answer)
 
 
 # print("처음")
@@ -194,21 +194,35 @@ while my_coke//empt_coke != 0:
 
 
 # # 소수 찾기   >>>>> fail
-# n = 1000000
-# answer = 0
+# import math
+# n = 5000
 
-# for i in range(n):
-#     count = 0
-#     for j in range(i+1):
-#         if (i+1) % (j+1) == 0:
-#             count += 1
-#     if count == 2:
-#         answer += 1
-# print(answer)
+# # 0 과 1을 제외한 자연수를 모두 담는 리스트
+# array = [i+2 for i in range(n-1)]
+
+# for i in range(len(array)):
+#     array_2 = []
+
+#     for j in range(n+1):
+#         if (j+1) % (i+2) == 0 and (j+1) in array:
+#             array_2.append(j+1)
+
+#     if len(array_2) > 1:
+#         print(array_2)
+#         for k in range(len(array_2)):
+#             try:
+#                 if k == len(array_2):
+#                     array.remove(array_2[k])
+#                 else:
+#                     array.remove(array_2[k+1])
+#             except:
+#                 continue
+    
+# print(array)
 
 
 
-# # 가장 가까운 같은 글자
+# # 가장 가까운 같은 글자  >>>> fail
 # s = "banana"
 # s_list = []
 # result = []
@@ -225,7 +239,8 @@ while my_coke//empt_coke != 0:
 
 
 
-# # 모의고사
+
+# # 모의고사  >>>>>> fail
 # answers = [1,2,3,4,5]
 # return_v = []
 
@@ -233,10 +248,17 @@ while my_coke//empt_coke != 0:
 # a_2 = [2,1,2,3,2,4,2,5]
 
 
-# 폰켓몬 
-import itertools
 
-nums = [3,1,2,3]
-nPr = itertools.permutations(nums, 3)
+# # 폰켓몬   >>>>>> fail
+# import itertools
 
-print(set(list(nPr)[4]))
+# nums = [3,1,2,3]
+# nPr = itertools.permutations(nums, int(len(nums)/2))
+
+# print(list(nPr))
+# print(len(list(nPr)))
+# for i in range(len(list(nPr))):
+#     print(i)
+#     print(list(nPr)[i])
+#     print(list(list(nPr)[i]))
+#     print(set(list(list(nPr)[i]))) 
