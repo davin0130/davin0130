@@ -364,23 +364,6 @@
 
 
 
-# # 문자열 순서대로 정렬 >>> fail
-# strs = ["sun", "bed", "car"]
-# n = 1
-# answer = []
-# index_list = sorted([i[n] for i in strs])
-# print(index_list)
-# if index_list != set(index_list):
-#     strs.sort()
-# for j in range(len(strs)):
-#     for k in range(len(index_list)):
-#         print(strs[k][n], index_list[j])
-#         if strs[k][n] == index_list[j]:
-#             answer.append(strs[k])
-#             index_list.pop(j)
-        
-# print(index_list, answer)
-
 
 
 # # 정해진 예산에서 최대 부서 지원하기

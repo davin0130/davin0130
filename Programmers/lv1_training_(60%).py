@@ -74,6 +74,26 @@
 
 
 
+# 문자열 순서대로 정렬 >>> fail
+strs = ["abce", "abcd", "cdx"]
+n = 2
+
+answer = ["" for i in strs]
+index_list = sorted([i[n] for i in strs])
+print(answer, index_list)
+
+if index_list != set(index_list):
+    strs.sort()
+
+print(strs)
+
+for i in range(len(answer)):
+    for j in range(len(answer)):
+        if strs[j][n] == index_list[i]:
+            answer[i] = strs[j]
+            
+print(answer, index_list)
+
 # #  >>>>> fail
 # numbers = [5,0,2,7]
 # result = []
@@ -193,12 +213,17 @@
 
 
 
-# # 소수 찾기   >>>>> fail
+# # # 소수 찾기   >>>>> fail (이중for문 없애기)
 # import math
-# n = 5000
+# n = 1000
 
 # # 0 과 1을 제외한 자연수를 모두 담는 리스트
 # array = [i+2 for i in range(n-1)]
+# for i in range(len(array)):
+#     if (i+1) % 2 == 0 or (i+1) % 3 == 0 and i+1 > 2:
+#         array.remove(i+1)
+
+# print(array)
 
 # for i in range(len(array)):
 #     array_2 = []
