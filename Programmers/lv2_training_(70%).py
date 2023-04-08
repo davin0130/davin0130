@@ -30,15 +30,33 @@
 # print(len(sstr))
 
 
-# 최솟값 만들기
-A = [1,2]
-B = [3,4]
-answer = 0
+# # 최솟값 만들기
+# A = [1,2]
+# B = [3,4]
+# answer = 0
 
-A = sorted(A)
-B = sorted(B, reverse=True)
+# A = sorted(A)
+# B = sorted(B, reverse=True)
     
-for i in range(len(A)):
-    answer += A[i] * B[i]
+# for i in range(len(A)):
+#     answer += A[i] * B[i]
 
-print(answer)
+# print(answer)
+
+
+# 이진 변환 반복하기
+s = "110010101001"
+
+s_length = len(s)
+count = 0
+zero = 0
+
+while s_length != 1:
+    print(s)
+    zero += s.count('0')
+    s = s.replace('0','')
+    s_length = len(s)
+    s = format(len(s), 'b')
+    count += 1
+
+print(count, zero)
