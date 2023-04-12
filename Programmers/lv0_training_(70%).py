@@ -97,16 +97,61 @@
 
 
 
-# 외계어 사전
-spell = ["z", "d", "x"]
-dic = ["def", "dww", "dzx", "loveaw"]
+# # 외계어 사전
+# spell = ["z", "d", "x"]
+# dic = ["def", "dww", "dzx", "loveaw"]
 
-spell.sort()
+# spell.sort()
 
-for i in dic:
-    print(sorted(i))
-    if sorted(i) == spell:
-        print(1)
-        break
+# for i in dic:
+#     print(sorted(i))
+#     if sorted(i) == spell:
+#         print(1)
+#         break
+#     else:
+#         print(2)
+
+
+
+# 종이 자르기 
+# 1*1 짜리로 자르기 위해 해야할 가위질
+m = 3
+n = 5
+
+print((m-1) + m * (n-1))
+
+
+
+# 캐릭터의 좌표
+keyinput = ["left", "right", "up", "right", "right"]
+board = [3, 9]
+answer = [0, 0]
+key = {"left": -1, "right": 1, "up":1, "down":-1}
+
+print("최대 이동 가능 값 ", board[0]//2, board[1]//2)
+w = board[0]//2
+h = board[1]//2
+
+r = key['right'] * keyinput.count('right')
+l = key['left'] * keyinput.count('left')
+u = key['up'] * keyinput.count('up')
+d = key['down'] * keyinput.count('down')
+
+print(r, l, u, d)
+
+answer[0] = r + l
+answer[1] = u + d
+
+if abs(answer[0]) > w:
+    if answer[0] < 0:
+        answer[0] = (-1) * w
     else:
-        print(2)
+        answer[0] = w
+elif abs(answer[1]) > h:
+    if answer[1] < 0:
+        answer[1] = (-1) * h
+    else:
+        answer[1] = h
+
+
+print(answer)
