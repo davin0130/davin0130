@@ -113,45 +113,121 @@
 
 
 
-# 종이 자르기 
-# 1*1 짜리로 자르기 위해 해야할 가위질
-m = 3
-n = 5
+# # 종이 자르기 
+# # 1*1 짜리로 자르기 위해 해야할 가위질
+# m = 3
+# n = 5
 
-print((m-1) + m * (n-1))
-
-
-
-# 캐릭터의 좌표
-keyinput = ["left", "right", "up", "right", "right"]
-board = [3, 9]
-answer = [0, 0]
-key = {"left": -1, "right": 1, "up":1, "down":-1}
-
-print("최대 이동 가능 값 ", board[0]//2, board[1]//2)
-w = board[0]//2
-h = board[1]//2
-
-r = key['right'] * keyinput.count('right')
-l = key['left'] * keyinput.count('left')
-u = key['up'] * keyinput.count('up')
-d = key['down'] * keyinput.count('down')
-
-print(r, l, u, d)
-
-answer[0] = r + l
-answer[1] = u + d
-
-if abs(answer[0]) > w:
-    if answer[0] < 0:
-        answer[0] = (-1) * w
-    else:
-        answer[0] = w
-elif abs(answer[1]) > h:
-    if answer[1] < 0:
-        answer[1] = (-1) * h
-    else:
-        answer[1] = h
+# print((m-1) + m * (n-1))
 
 
-print(answer)
+
+# # 캐릭터의 좌표
+# keyinput = ["left", "right", "up", "right", "right"]
+# board = [3, 9]
+# answer = [0, 0]
+# key = {"left": -1, "right": 1, "up":1, "down":-1}
+
+# print("최대 이동 가능 값 ", board[0]//2, board[1]//2)
+# w = board[0]//2
+# h = board[1]//2
+
+# r = key['right'] * keyinput.count('right')
+# l = key['left'] * keyinput.count('left')
+# u = key['up'] * keyinput.count('up')
+# d = key['down'] * keyinput.count('down')
+
+# print(r, l, u, d)
+
+# answer[0] = r + l
+# answer[1] = u + d
+
+# if abs(answer[0]) > w:
+#     if answer[0] < 0:
+#         answer[0] = (-1) * w
+#     else:
+#         answer[0] = w
+# elif abs(answer[1]) > h:
+#     if answer[1] < 0:
+#         answer[1] = (-1) * h
+#     else:
+#         answer[1] = h
+
+
+# print(answer)
+
+
+
+# # 직사각형 넓이 구하기
+# dots = [[1, 1], [2, 1], [2, 2], [1, 2]]
+# x = []
+# y = []
+
+# for i in dots:
+#     x.append(i[0])
+#     y.append(i[1])
+
+# print((max(x)-min(x)) * (max(y)-min(y)))
+
+
+
+# # 로그인 성공?
+# id_pw = ["rabbit04", "98761"]
+# db = [["jaja11", "98761"], ["krong0313", "29440"], ["rabbit00", "111333"]]
+# find = False
+# answer = ''
+
+# while find == False:
+#     for i in db:
+#         if id_pw[0] == i[0]:
+#             if id_pw[1] == i[1]:
+#                 answer = 'login'
+#                 find = True
+#                 break
+#             else:
+#                 answer = 'wrong pw'
+#                 find = True
+#                 break
+#         else:
+#             answer = 'fail'
+#             find = True
+#             continue
+
+# print(answer)
+
+
+
+# # 치킨 쿠폰
+# chicken = 1081
+# coup = 0
+# answer = 0
+
+
+# while chicken > 0:
+#     chicken -= 1
+#     coup += 1
+#     if coup == 10:
+#         chicken += 1
+#         coup = 0
+#         answer += 1
+#     print(coup, chicken)
+# print(answer)
+
+
+
+# # 등수 매기기   >>> fail (dictionary 사용 x >> key값 중복 시 추가가 아닌 기존 정보에 업데이트 됨)
+# score = [[80, 70], [70, 80], [50, 100], [30, 50], [90, 100], [100, 90], [100, 100], [10, 30]]
+# score = [int(sum(i)/2) for i in score]
+
+# sort_score = sorted(score, reverse=True)
+
+# print('score =', score)
+# print('sort_score =', sort_score)
+# # for i in range(len(sort_score)):
+# #     if sort_score[i] == sort_score[i-1]:
+# #         score[score.index(sort_score[i])] = i
+# #     else:
+# #         score[score.index(sort_score[i])] = i+1
+        
+# # print(sort_score)
+# # print(score)
