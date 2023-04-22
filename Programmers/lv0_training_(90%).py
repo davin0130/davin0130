@@ -40,3 +40,37 @@
 
 # for i in str(age):
 #     print(age_dic[int(i)], end='')
+
+
+# # 조건에 맞게 수열 변환
+# # k가 짝수면 arr 각 원소에 더하기 k
+# # k가 홀수면 arr 각 원소에 곱하기 k
+# arr = [1, 2, 3, 100, 99, 98]
+# k = 3
+# answer = [i+k if k%2==0 else i*k for i in arr]
+
+# print(answer)
+
+
+
+# # n의 배수
+# # num이 n의 배수이면 1 아니면 0
+# num = 98
+# n = 2
+
+# print(1 if num%n==0 else 0)
+
+
+
+# # 문자열 곱하기
+# my_string = "string"
+# k = 3
+
+# print(my_string * k)
+
+
+
+# n번째 원소까지
+num_list = [2, 1, 6]
+n = 1
+print(num_list[:n])

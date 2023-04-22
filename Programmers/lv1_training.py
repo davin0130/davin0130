@@ -363,9 +363,6 @@
 
 
 
-
-
-
 # # 정해진 예산에서 최대 부서 지원하기
 # d = [1,3,2,5,4]
 # budget = 9
@@ -412,3 +409,61 @@
 # # print(answer)
 # # if num_dict in s:
 # #     print(num_dict)
+
+
+
+# # x만큼 간격이 있는 n개 숫자
+# x = 0
+# n = 2
+
+# if x > 0:
+#     num = x*n+1
+#     answer = [i for i in range(x, num, x)]
+# elif x == 0:
+#     answer = [0]*n
+# else:
+#     num = x*n-1
+#     answer = [i for i in range(x, num, x)]
+
+# print(answer)
+
+
+# # 정수 제곱근 판별
+# n = 121
+# if n % (n**(1/2)) == 0:
+#     answer = ((n**(1/2))+1)**2
+# else:
+#     answer = -1
+# print(int(answer))
+
+
+
+# # 하샤드 수
+# # x를 x의 각 자릿수의 합으로 나누어 떨어지면 True
+# # 나누어 떨어지지 않는다면 False
+# x = 10
+# arr = [int(i) for i in str(x)]
+
+# print(True if x% sum(arr) == 0 else False)
+
+
+
+# # 음양 더하기
+# absolutes = [4,7,12]
+# signs = [True,False,True]
+
+# for i in range(len(signs)):
+#     if signs[i] == False:
+#         absolutes[i] = absolutes[i] * (-1)
+# print(sum(absolutes))
+
+
+
+# # 부족한 금액 계산하기
+# price = 3
+# money = 30
+# count = 4
+
+# sump = [i for i in range(price, count*price+1, price)]
+# print(sump)
+# print(sum(sump)- money)

@@ -41,3 +41,13 @@
 #         count += 1
     
 # print(answer)
+
+
+# 평행
+dots = [[1, 4], [9, 2], [3, 8], [11, 6]]
+
+d1 = dots[0]
+d2 = dots[1]
+d3 = dots[2]
+d4 = dots[3]
+

@@ -337,3 +337,19 @@
 #         answer -= int(s[i-1])
 
 # print(answer)
+
+
+# # 가까운 1 찾기
+# arr = [1, 0, 0, 1, 0, 0]
+# idx = 4
+# answer = 0
+
+# try:
+#     answer = arr.index(1, idx)
+# except:
+#     answer = -1
+
+# print(answer)
+
+
+
